@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project Jquery</title>
+    <link rel="icon" href="image/logo.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
 
     <div class="jumbotron jumbotron-fluid text-center text-white bg-info">
         <h1>Cambodia Foods</h1>
@@ -35,7 +37,7 @@
                 
             </div>
             <div class="col-4 text-white" id="hideperson">
-                    <h4>Number of persons</h4>
+                    <h4 class="text-primary">Number of persons</h4>
                 <div class="input-group" id="appear">
                     <button class="btn btn-danger" type="button" id="minus">&minus;</button>
                     <input type="text" class="form-control text-center" id="member" value="1">
@@ -48,9 +50,11 @@
         </div>
         <div class="row mt-4">
             <div class="col-6" style="padding-left: 20%">
+                <h3 class="text-primary" id="ingredient">Ingredients</h3>
                 <div class="table table-borderlight" id="ingredientId"></div>
             </div>
             <div class="col-6">
+                <h3 class="text-primary" id="instuction">Instructions</h3>
                 <div class="table table-borderlight" id="step"></div>
             </div>
         </div>

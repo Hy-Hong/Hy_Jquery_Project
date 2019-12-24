@@ -60,6 +60,8 @@ $('#selection').append(option);
 //==================================================================================================================//
 $('#appear').hide();
 $('#hideperson').hide();
+$('#instuction').hide();
+$('#ingredient').hide();
 
 function getRecipe(myId){
 allData.forEach(item => {
@@ -72,6 +74,8 @@ allData.forEach(item => {
         showStep(item.instructions);
         $('#appear').show();
         $('#hideperson').show();
+        $('#instuction').show();
+        $('#ingredient').show();
         // show numbers to input
         $('#member').val(item.nbGuests);
         oldNbGuest = $('#member').val();
@@ -113,7 +117,7 @@ function showIngredient(ing){
 var resultIngredient = "";
 ing.forEach(item => {
     resultIngredient += `
-                <tr class="bg-dark text-white">
+                <tr class="bg-secondary text-white">
                     <td><img src="${item.iconUrl}" width="100"></td>
                     <td>${item.name}</td>
                     <td>${item.quantity}</td>
@@ -132,7 +136,7 @@ function changeIngredient(ing,plus){
     ing.forEach(item =>{
     var addIngredient = item.quantity * parseInt(plus) / oldNbGuest;
     resultUpdateIngredient +=`
-        <tr class="bg-dark text-white">
+        <tr class="bg-secondary text-white">
             <td><img src="${item.iconUrl}" width="100"></td>
             <td>${item.name}</td>
             <td>${addIngredient}</td>
@@ -151,7 +155,7 @@ function showStep(step){
     resultStep = ""; 
     for(let i = 1; i < cutStep.length; i++){
         resultStep += `
-        <tr class="bg-dark text-white">
+        <tr class="bg-secondary text-white">
             <td><p class="text-primary">Step ${i}</p></td>
             <td><p>${cutStep[i]}</p></td>
         </tr>
